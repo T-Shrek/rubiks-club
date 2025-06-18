@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("partials/head") %>
+  <body class="bg-gray-950 text-white min-h-screen relative overflow-hidden">
+    <div class="relative z-20">
+    <%- include("partials/header") %>
+    </div>
+
+    <main class="flex flex-col items-center justify-center min-h-screen px-4 text-center relative z-10">
+      <h1 class="text-5xl font-bold text-purple-400 mb-4">🎉 Thank You!</h1>
+      <p class="text-lg text-gray-300 max-w-xl">
+        Your submission has been received. We appreciate your interest in the Rubik's Cube Club! Our team will review your information and get back to you shortly.
+      </p>
+      <a href="/" class="mt-8 inline-block px-6 py-3 rounded-md bg-purple-600 hover:bg-purple-700 transition text-white font-semibold">
+        🔙 Back to Home
+      </a>
+    </main>
+
+    <canvas id="confetti-canvas" class="fixed top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>
+<%- include("partials/footer") %>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  const canvas = document.getElementById('confetti-canvas');
+  const confetti = window.confetti.create(canvas, {
+    resize: true,      
+    useWorker: true    
+  });
+
+  confetti({
+    particleCount: 200,
+    spread: 120,
+    origin: { y: 0.5 },
+    ticks: 200
+  });
+
+
+  setTimeout(() => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.3 }
+    });
+  }, 600);
+
+</script>
+
+  </body>
+</html>

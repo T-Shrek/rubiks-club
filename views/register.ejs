@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rubik's Cube Club</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+  <body class="bg-gray-950 text-white min-h-screen">
+    <div class="relative z-20">
+    <%- include("partials/header") %>
+    </div>
+    <main class="flex flex-col items-center justify-center min-h-screen px-4">
+      <div class="text-center max-w-2xl">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+          Join the <span class="text-purple-400">Rubik’s Cube Club</span>
+        </h1>
+        <p class="mt-4 text-lg text-gray-300">
+          Whether you’re a beginner or a speedcuber, be part of our solving community.
+        </p>
+      </div>
+
+      <form action="/register" method="POST" class="mt-10 w-full max-w-md bg-gray-900 rounded-xl p-6 shadow-lg space-y-4">
+        <input type="text" name="name" placeholder="Your Name" required
+          class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+        
+        <input type="email" name="email" placeholder="Your Email" required
+          class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+
+        <select name="year" required
+          class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700">
+          <option disabled selected>Select Your Year</option>
+          <option value="1st">1st Year</option>
+          <option value="2nd">2nd Year</option>
+          <option value="3rd">3rd Year</option>
+          <option value="4th">4th Year</option>
+        </select>
+
+        <select name="skill" required
+          class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700">
+          <option disabled selected>Choose Skill Level</option>
+          <option value="Beginner">Beginner</option>
+          <option value="Intermediate">Intermediate</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+
+        <input type="number" name="time" placeholder="Average Solve Time (sec)" required
+          class="w-full p-3 rounded-md bg-gray-800 text-white border border-gray-700 focus:outline-none focus:ring-2 focus:ring-purple-500" />
+
+        <button type="submit"
+          class="w-full py-3 rounded-md bg-purple-600 hover:bg-purple-700 transition text-white font-semibold">
+          🚀 Join Now
+        </button>
+      </form>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

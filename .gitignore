@@ -1,0 +1,12 @@
+# Node.js dependencies
+node_modules/
+
+# Environment variables (never upload this!)
+.env
+
+# OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

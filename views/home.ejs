@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rubik’s Cube Club</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container" data-aos="zoom-in">
+      <h1>🧊 Rubik’s Cube Club</h1>
+      <nav class="hidden md:flex space-x-8 text-lg">
+        <a href="#home" class="relative group text-purple-300 hover:text-white transition duration-300">
+        Home
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-500 group-hover:w-full transition-all duration-300"></span>
+        </a>
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#join">Join</a>
+        <a href="/contact" class="relative group text-purple-300 hover:text-white transition duration-300">
+        Contact Us
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-purple-500 group-hover:w-full transition-all duration-300"></span>
+      </a>
+      </nav>
+      <button class="md:hidden text-purple-300 hover:text-white transition text-2xl">
+      ☰
+    </button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+  <div class="hero-content" data-aos="fade-up">
+    <h2>Unlock Your Mind!</h2>
+    <p>Join a community of cubers, speedsolvers, and puzzle lovers.</p>
+    <a href="#join" class="btn">Become a Member</a>
+  </div>
+</section>
+
+
+  <section id="about" class="section" data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>We are a passionate group of Rubik's Cube enthusiasts who meet weekly to challenge ourselves, learn new techniques, and have fun solving together.</p>
+  </section>
+
+  <section id="events" class="section" data-aos="fade-up">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li>🗓 Cube Battle - June 25, 2025</li>
+      <li>🧠 Cube Algorithm Workshop - July 5, 2025</li>
+      <li>🏆 Speedsolve Championship - August 15, 2025</li>
+    </ul>
+  </section>
+
+  <section id="join" class="section" data-aos="fade-up">
+    <h2>Join the Club</h2>
+    <p>Ready to scramble and solve? Fill out our form to get started!</p>
+    <br/>
+    <a href="/register" target="_blank" class="btn">Register Now</a>
+  </section>
+
+  <footer class="bg-black text-white py-6 text-center" data-aos="fade-up">
+    <p>Follow us on:</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/rubikscubeclub" target="_blank">Instagram</a>
+      <a href="https://www.twitter.com/rubikscubeclub" target="_blank">Twitter</a>
+    </div>
+  &copy; <%= new Date().getFullYear() %> Rubik's Cube Club · All rights reserved · Made with ❤️ and logic
+  </footer>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,  // animation duration in ms
+    once: true       // whether animation should happen only once
+  });
+</script>
+
+</body>
+</html>
