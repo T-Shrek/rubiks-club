@@ -1,3 +1,4 @@
+<!-- HEADER COMPONENT -->
 <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-gradient-to-r from-[#0f0c29]/80 via-[#302b63]/80 to-[#24243e]/80 border-b border-purple-500/30 shadow-xl">
   <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
     
@@ -6,7 +7,7 @@
       Rubik’s Cube Club
     </h1>
 
-    <!-- Desktop Nav -->
+    <!-- Desktop Navigation -->
     <nav class="hidden md:flex space-x-8 text-lg">
       <a href="/" class="relative group text-purple-300 hover:text-white transition">
         Home
@@ -22,12 +23,29 @@
       </a>
     </nav>
 
-    <!-- Mobile Menu Placeholder (Optional) -->
-    <button class="md:hidden text-purple-300 hover:text-white transition text-2xl">
+    <!-- Mobile Menu Toggle Button -->
+    <button onclick="toggleMenu()" class="md:hidden text-purple-300 hover:text-white transition text-2xl focus:outline-none">
       ☰
     </button>
   </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+    <nav class="flex flex-col space-y-2 text-lg text-purple-200">
+      <a href="/" class="hover:text-white transition">Home</a>
+      <a href="/register" class="hover:text-white transition">Register</a>
+      <a href="/contact" class="hover:text-white transition">Contact Us</a>
+    </nav>
+  </div>
 </header>
 
-<!-- Spacer to prevent content hidden behind fixed navbar -->
+<!-- Spacer to prevent content being hidden behind fixed navbar -->
 <div class="h-20"></div>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
